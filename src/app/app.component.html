@@ -1,0 +1,19 @@
+
+<div class="app">
+  <h3>Angular Stopwatch</h3>
+  <div class="stopwatch-card">
+    <div class="tabloid">
+      {{stopwatch.minutes}} <span>:</span>  {{stopwatch.seconds}}
+    </div>
+    <div class="container">
+      <button class="button-one" (click)="startCount()" *ngIf="startBtn">Start</button>
+      <div *ngIf="!startBtn">
+        <button (click)="stopTimer()">Stop</button>
+        <button (click)="dbClickCheck()" #dbClick>Wait</button>
+        <button (click)="resetTimer()">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
